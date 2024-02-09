@@ -29,6 +29,20 @@ namespace Parkolohaz
             }
             Console.WriteLine($"\nA szektor, ahol a legkevesebb autó van a {szintek[index]._name}");
 
+            Console.WriteLine("\nSzintek és szektorok, ahol nincsenek autók:\n");
+            bool hiba = true;
+            foreach (var szint in szintek)
+            {
+                for (int i = 0; i < szint._szektorok.Count; i++)
+                {
+                    if (szint._szektorok[$"{i+1}. szektor"] == 0)
+                    {
+                        Console.WriteLine($"{szint._name}\t{i+1}. szektor");
+                        hiba = false;
+                    }
+                }
+            }
+            if ( hiba ) Console.WriteLine("Nincs olyan szektor, ahol nem parkol autó");
             Console.ReadLine();
         }
     }
