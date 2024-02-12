@@ -68,7 +68,14 @@ namespace Parkolohaz
             Console.WriteLine($"Az átlagos autók száma:  {atlag}\n\t{atlagos} db szektorban van átlagos darabszámú autó\n\t{atlagAlatt} db szektorban van átlagosnál kevesebb darabszámú autó\n\t{atlagFelett}  db szektorban van átlagosnál nagyobb darabszámú autó");
 
             Console.WriteLine("\n11. feladat:");
-            foreach
+            foreach (var szint in szintek)
+            {
+                string szintAdat = string.Empty;
+                for (int i = 0; i < szint._szektorok.Count; i++)
+                {
+
+                }
+            }
 
             Console.WriteLine("\n12. feladat:");
             int szint12DB = szintek.Last()._szektorok.Values.Sum();
