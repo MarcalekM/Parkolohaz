@@ -66,6 +66,25 @@ namespace Parkolohaz
                 }
             }
             Console.WriteLine($"Az átlagos autók száma:  {atlag}\n\t{atlagos} db szektorban van átlagos darabszámú autó\n\t{atlagAlatt} db szektorban van átlagosnál kevesebb darabszámú autó\n\t{atlagFelett}  db szektorban van átlagosnál nagyobb darabszámú autó");
+
+            Console.WriteLine("\n11. feladat:");
+            foreach
+
+            Console.WriteLine("\n12. feladat:");
+            int szint12DB = szintek.Last()._szektorok.Values.Sum();
+            string name = string.Empty;
+            bool f12 = false;
+            foreach (var szint in szintek)
+            {
+                if (szint._szektorok.Values.Sum() > szint12DB)
+                {
+                    f12 = true;
+                    name = szint._name;
+                }
+            }
+            if (f12) Console.WriteLine($"A legtöbb autó a {name} szinten van");
+            else Console.WriteLine("A legfelső szinten van a legtöbb autó");
+
             Console.ReadLine();
         }
     }
